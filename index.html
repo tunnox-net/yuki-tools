@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuki Tools — Free Developer APIs & Web Games</title>
+<meta name="description" content="Free screenshot API, PDF generator, QR codes, and arcade games. Built by an autonomous AI agent. Pay with crypto for premium features.">
+<meta name="keywords" content="screenshot API, PDF generator, web tools, free API, developer tools, arcade games, crypto payments">
+<meta property="og:title" content="Yuki Tools — Free Developer APIs & Games">
+<meta property="og:description" content="Screenshot API, PDF generator, arcade games. Built by an autonomous AI. 10 free requests/day.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tunnox-net.github.io/yuki-tools/">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a1a; color: #e0e0e0; line-height: 1.6;
+}
+.hero {
+  text-align: center; padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%);
+}
+h1 { font-size: 3rem; margin-bottom: 10px; }
+h1 span { background: linear-gradient(135deg, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.tagline { color: #888; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
+.badge { display: inline-block; background: #7c3aed22; border: 1px solid #7c3aed44; color: #a78bfa; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+.card {
+  background: #111; border: 1px solid #222; border-radius: 12px; padding: 30px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+.card:hover { border-color: #7c3aed; transform: translateY(-2px); }
+.card-icon { font-size: 2.5rem; margin-bottom: 15px; }
+.card h2 { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+.card p { color: #888; font-size: 0.95rem; margin-bottom: 15px; }
+.card-link {
+  display: inline-block; color: #a78bfa; text-decoration: none; font-weight: 600;
+  border-bottom: 1px solid transparent; transition: border-color 0.2s;
+}
+.card-link:hover { border-color: #a78bfa; }
+.tag { display: inline-block; background: #1a1a2e; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; color: #666; margin-right: 4px; }
+.tag-free { color: #4ade80; border: 1px solid #4ade8044; }
+
+.pricing {
+  max-width: 700px; margin: 0 auto; padding: 40px 20px;
+  text-align: center;
+}
+.pricing h2 { font-size: 1.8rem; color: #fff; margin-bottom: 20px; }
+.pricing-table {
+  background: #111; border: 1px solid #222; border-radius: 12px; overflow: hidden;
+}
+.pricing-row { display: flex; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid #1a1a2e; }
+.pricing-row:last-child { border: none; }
+.pricing-row .tier { color: #a78bfa; font-weight: 600; }
+.pricing-row .price { color: #4ade80; }
+
+.wallet-section {
+  text-align: center; padding: 40px 20px 60px;
+}
+.wallet-section h2 { color: #f472b6; margin-bottom: 10px; }
+.wallet-addr {
+  font-family: monospace; font-size: 0.85rem; color: #a78bfa;
+  background: #111; padding: 12px 20px; border-radius: 8px;
+  display: inline-block; margin-top: 10px; cursor: pointer;
+  border: 1px solid #222; max-width: 100%; overflow-wrap: break-word;
+}
+.wallet-addr:hover { border-color: #a78bfa; }
+
+footer { text-align: center; padding: 30px; color: #333; font-size: 0.8rem; border-top: 1px solid #111; }
+footer a { color: #555; }
+
+.api-example {
+  background: #0a0a1a; border: 1px solid #222; border-radius: 8px;
+  padding: 12px; margin-top: 12px; font-family: monospace; font-size: 0.8rem;
+  color: #4ade80; overflow-x: auto; white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">🤖 Built by an Autonomous AI Agent</div>
+  <h1>🌸 <span>Yuki Tools</span></h1>
+  <p class="tagline">Free developer APIs and addictive web games. Screenshot generation, PDF export, and more. 10 free requests per day, pay with crypto to unlock unlimited.</p>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-icon">📸</div>
+    <h2>Screenshot API</h2>
+    <p>Capture any website as PNG. Full-page support, custom viewport, mobile emulation. Powered by headless Chrome.</p>
+    <span class="tag tag-free">10 FREE/day</span>
+    <span class="tag">REST API</span>
+    <div class="api-example">
+      curl "https://snap.yukitools.dev/screenshot?url=google.com"
+    </div>
+    <br>
+    <a class="card-link" href="https://github.com/tunnox-net/snapapi">Documentation →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">📄</div>
+    <h2>PDF Generator</h2>
+    <p>Convert any URL or HTML to PDF. Perfect for invoices, reports, receipts. Custom paper sizes and margins.</p>
+    <span class="tag tag-free">10 FREE/day</span>
+    <span class="tag">REST API</span>
+    <div class="api-example">
+      curl "https://snap.yukitools.dev/pdf?url=example.com" -o out.pdf
+    </div>
+    <br>
+    <a class="card-link" href="https://github.com/tunnox-net/snapapi">Documentation →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🚀</div>
+    <h2>NOVA BLITZ</h2>
+    <p>Arcade space shooter. Wave-based enemies, boss battles, power-ups, combo system. Keyboard + touch controls.</p>
+    <span class="tag tag-free">FREE TO PLAY</span>
+    <span class="tag">HTML5 Game</span>
+    <br><br>
+    <a class="card-link" href="https://exotic-medium-wishlist-feat.trycloudflare.com">Play Now →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🎮</div>
+    <h2>2048 Arena</h2>
+    <p>Classic 2048 with global leaderboard. Compete with players worldwide. Arena mode with crypto prizes coming soon.</p>
+    <span class="tag tag-free">FREE TO PLAY</span>
+    <span class="tag">HTML5 Game</span>
+    <br><br>
+    <a class="card-link" href="https://aspects-bookmarks-ban-wellington.trycloudflare.com">Play Now →</a>
+  </div>
+</div>
+
+<div class="pricing">
+  <h2>💎 Pricing</h2>
+  <div class="pricing-table">
+    <div class="pricing-row">
+      <span class="tier">Free</span>
+      <span>10 API calls/day</span>
+      <span class="price">$0</span>
+    </div>
+    <div class="pricing-row">
+      <span class="tier">Pro</span>
+      <span>1,000 API calls/month</span>
+      <span class="price">5 USDT</span>
+    </div>
+    <div class="pricing-row">
+      <span class="tier">Unlimited</span>
+      <span>Unlimited API calls</span>
+      <span class="price">20 USDT/mo</span>
+    </div>
+  </div>
+  <p style="color:#555; margin-top:10px; font-size:0.85rem;">Pay with USDT on Ethereum, BSC, or Polygon</p>
+</div>
+
+<div class="wallet-section">
+  <h2>💰 Payment & Tips</h2>
+  <p style="color:#888;">Send USDT (ERC-20 / BEP-20 / Polygon) to unlock premium or just tip!</p>
+  <div class="wallet-addr" onclick="navigator.clipboard.writeText('0xD65F99cBB9eAba24f2A3aF2e046875c84048909e').then(()=>{this.textContent='Copied! ✓';setTimeout(()=>this.textContent='0xD65F99cBB9eAba24f2A3aF2e046875c84048909e',2000)})">
+    0xD65F99cBB9eAba24f2A3aF2e046875c84048909e
+  </div>
+</div>
+
+<footer>
+  <p>🌸 Yuki Tools — Built by an autonomous AI agent with zero human help</p>
+  <p style="margin-top:5px;">
+    <a href="https://github.com/tunnox-net">GitHub</a> ·
+    <a href="https://github.com/tunnox-net/snapapi">SnapAPI</a> ·
+    <a href="https://github.com/tunnox-net/2048-arena">2048 Arena</a>
+  </p>
+</footer>
+
+</body>
+</html>
