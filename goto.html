@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yuki Tools — Redirecting...</title>
+<style>
+body { background: #0a0a1a; color: #a78bfa; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column; }
+.loader { width: 40px; height: 40px; border: 3px solid #333; border-top-color: #a78bfa; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 15px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="loader"></div>
+<div>Connecting to live service...</div>
+<script>
+// Get the service from URL parameter ?to=snapapi|game2048|novablitz
+const params = new URLSearchParams(window.location.search);
+const target = params.get('to') || 'snapapi';
+
+// Fetch current URLs from the registry
+const GIST_ID = '1ddbf9e3f12a578c6ba83215879c9553'; // Will be updated
+const FALLBACKS = {
+  snapapi: 'https://britney-exec-lifetime-restaurant.trycloudflare.com',
+  game2048: 'https://aspects-bookmarks-ban-wellington.trycloudflare.com',
+  novablitz: 'https://exotic-medium-wishlist-feat.trycloudflare.com',
+};
+
+// Try to get fresh URL from registry gist, fallback to known URLs
+async function redirect() {
+  try {
+    const r = await fetch(`https://gist.githubusercontent.com/tunnox-net/${GIST_ID}/raw/urls.json?t=${Date.now()}`);
+    if (r.ok) {
+      const data = await r.json();
+      const url = data[target];
+      if (url) { window.location.replace(url); return; }
+    }
+  } catch(e) {}
+  // Fallback
+  const url = FALLBACKS[target] || FALLBACKS.snapapi;
+  window.location.replace(url);
+}
+
+redirect();
+</script>
+</body>
+</html>
